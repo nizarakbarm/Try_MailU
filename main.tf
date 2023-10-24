@@ -22,6 +22,6 @@ resource "helm_release" "mailu" {
     chart = "mailu"
 
     values = [
-        "${file("values-files/values.yaml")}"
+        "${file("${path.module}/values-files/values.yaml")}"
     ]
 }
